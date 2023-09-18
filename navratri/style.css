@@ -161,9 +161,361 @@ p
 }
 
 
+.position
+{
+    position: relative;
+}
+
+
+.container .card
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #000000;
+    border-radius: 30px;
+    overflow: hidden;
+    
+}
+.container .card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-color: #f44444;
+    clip-path: circle(150px at 50% 50%);  
+    transition: 0.5s ease-in-out; 
+    
+}
+.container .card:hover:before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+.container .card::after
+{
+    content: "GARBA";
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+
+}
+.container .card .imgbx
+{
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+    width: 100%;  
+    height: 100%;  
+    transition: .5s; 
+    
+}
+.container .card .imgbx img
+{
+    
+    position: relative;
+    width: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%) ;
+    
+    
+}
+.container .card:hover .imgbx {  
+    top: 0%;  
+    transform: translateY(-25%);
+}
+
+.container.card:hover .imgbx 
+{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+,.container .card:hover .imgbx
+{
+    top: 0%;
+    transform: translateY(-25%);
+}
+.container .card .contentbx
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+.container .card:hover .contentbx {  
+    height: 190px;  
+  }  
+.container .card .contentbx h2
+{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;  
+  
+}
+.container .card .contentbx .size,
+.container .card .contentbx .color
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentbx .size ,
+
+{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+.container .card:hover .contentbx .color
+{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.6s;
+}
+.container .card .contentbx .size h3,
+.container .card .contentbx .color h3
+{
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+.buy
+{
+    margin-left: 10px;
+}
+.container .card .contentbx .size span
+{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 10px;
+    color: #111;
+    background:  #fff;
+    
+    display: inline-block;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+.container .card .contentbx .size span:hover
+{
+    background: red;
+}
+.container .card .contentbx .color span
+{
+    width: 20px;
+    height: 20px;
+    background:  #ff0;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    
+} 
+
+.container .card .contentbx a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;  
+    color: black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+  
+}
+.container .card:hover.contentbx  a
+{
+    opacity: 0;
+    transform: translateY(0px);
+    transition-delay: 0.7s;
+}
+
+.event_card
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  margin-bottom: 100px;
+  background-color: #2f3640;
+  padding: 100px;
+  margin-right: -200px;
+  mar
+  
+}
+
+.about_events
+{
+  
+  
+  margin-top: 100px;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  font-style;: font-family: 'Poppins', sans-serif;
+  background-color: #2f3640;
+  color: white;
+  padding: 31px;
+
+  
+}
+
+
+.event1
+{
+  text-align: center;
+  padding: 10px;
+  background-color: #2f3640;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+}
+
+
+.event_img1
+{
+  display: flex;
+  gap: 50px;
+ 
+}
+.img_garba
+{
+  width: 40%;
+}
+
+.event_1
+{
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.stylish-button {
+  background-color: #f56868; /* Background color */
+  color: #ffffff; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding around text */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Add hover effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add a hover effect */
+.stylish-button:hover {
+  background-color: #2980b9; /* Darker background color on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* parallex styles  */
+.parallax {
+  /* The image used */
+  background-image: url("../img/background3.jpg");
+
+  /* Set a specific height */
+  min-height: 250px;
+  display: grid;
   
 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
 
+/* Styling the content sections */
+.content {
+  text-align: center;
+  padding: 35px 0;
+}
 
+.content h2 {
+  font-size: 36px;
+  color: #333;
+  
+}
+
+.content p {
+  font-size: 18px;
+  color: #666;
+  margin: 20px 0;
+  
+}
+
+/* Styling the contact cards */
+.contact-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  /* display: inline-block; */
+  /* width: calc(33.33% - 40px); */
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.contact-card p {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.container {
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  position: relative;
+}
+
+#contact_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 35px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.contact_me
+{
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 40px;
+}
 
     
+.lorem
+{
+  color: #fff;
+}
